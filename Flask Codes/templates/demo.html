@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% extends "component.html" %}
+  {% block head %}
+  {{ super() }}
+  {% endblock %}
+  <title>{% block title %}Index{% endblock %}</title>
+</head>
+
+<body>
+  {%block content%}
+
+  <h2>Flash Messages</h2>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <ul>
+    {% for message in messages %}
+    <li>{{message}}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+
+  <img src="{{ url_for('static', filename='Images/fall.gif') }}" />
+  <h2>{{name}}</h2>
+  {% if name=="Aarav" %}
+  <p>Aarav is Smart</p>
+  {% else %}
+  <p>{{name}} is not smart.</p>
+  {% endif %}
+
+
+  {% for lang in langs%}
+  <p>{{lang}}</p>
+  {% endfor %}
+
+
+  {% endblock %}
+</body>
+
+</html>

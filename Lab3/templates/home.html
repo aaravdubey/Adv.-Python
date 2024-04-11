@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
+  <title>Home</title>
+</head>
+
+<body>
+  <img class="home-bg-img" src="{{ url_for('static', filename='Images/giphy.gif') }}" alt="">
+  <div class="container" style="display: flex; flex-direction: column;">
+    <p style="font-size: 6rem;">HOME</p>
+    <a href="/login">SignIn &#x2192;</a>
+    <a href="/register">SignUp &#x2192;</a>
+  </div>
+</body>
+
+</html>

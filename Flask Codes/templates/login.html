@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN</title>
+</head>
+
+<body>
+  {% if error %}
+  <p>ERROR: {{error}}</p>
+  {% endif %}
+
+  <form action="" method=post>
+    <input type="text" name="name" id="name" value="{{request.form.name}}" />
+    <input type="password" name="pass" id="pass" value="{{request.form.pass}}" />
+    <button type="submit" value="Login">LOGIN</button>
+  </form>
+</body>
+
+</html>

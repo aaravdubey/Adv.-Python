@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
+  <title>Home</title>
+</head>
+
+<body style="align-items: flex-start; padding-top: 3rem;">
+  <div class="container" style="display: flex; flex-direction: column;">
+    <h1>ADMIN</h1>
+
+    <form action="" method="post" style="margin-top: 20px; display: flex;">
+      <label for="songname" style="display: block; margin-bottom: 5px; margin-right: 5px;">Song Name:</label>
+      <input type="text" id="songname" name="songname"
+        style="padding: 5px; width: 100%; margin-bottom: 10px; margin-right: 2rem; border-radius: 5px;"><br>
+      <label for="moviename" style="display: block; margin-bottom: 5px; margin-right: 5px;">Movie Name:</label>
+      <input type="text" id="moviename" name="moviename"
+        style="padding: 5px; width: 100%; margin-bottom: 10px; margin-right: 2rem; border-radius: 5px;"><br>
+      <label for="releaseyear" style="display: block; margin-bottom: 5px; margin-right: 5px;">Release Year:</label>
+      <input type="number" id="releaseyear" name="releaseyear" min="1900" max="2099" step="1"
+        style="padding: 5px; width: 100%; margin-bottom: 10px; margin-right: 2rem; border-radius: 5px;"><br>
+      <input type="submit" value="Add Song"
+        style="padding: 0px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; border-radius: 5px;">
+    </form>
+
+    <table style="width:70%; border: 1px solid black; border-collapse: collapse; margin-top: 15px; ">
+      <tr style="background-color: #363636;">
+        <th style="border: 1px solid black; padding: 15px; text-align: left;">Song Name</th>
+        <th style="border: 1px solid black; padding: 15px; text-align: left;">Movie Name</th>
+        <th style="border: 1px solid black; padding: 15px; text-align: left;">Release Year</th>
+      </tr>
+      {% for data in datas %}
+      <tr>
+        <td style="border: 1px solid black; padding: 15px; text-align: left; color: lightgray;">{{data[0]}}</td>
+        <td style="border: 1px solid black; padding: 15px; text-align: left; color: lightgray;">{{data[1]}}</td>
+        <td style="border: 1px solid black; padding: 15px; text-align: left; color: lightgray;">{{data[2]}}</td>
+      </tr>
+      {% endfor %}
+
+    </table>
+  </div>
+</body>
+
+</html>

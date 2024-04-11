@@ -1,0 +1,7 @@
+/archive
+/x.ps1
+.venv
+venv
+*.jpg
+*.png
+*.mp4

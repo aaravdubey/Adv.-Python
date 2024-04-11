@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="" method="post">
+    <input type="text" name="name" placeholder="Item Name" required>
+    <input type="text" name="price" placeholder="Item Price" required>
+    <input type="text" name="quantity" placeholder="Item Quantity" required>
+    <button name="submit" value="Add" type="submit">Add</button>
+  </form>
+
+  <form action="" method="post">
+    <input type="text" name="id" placeholder="Item ID" required>
+    <button name="submit" value="Delete" type="submit">Delete</button>
+  </form>
+
+  <form action="" method="post">
+    <input type="text" name="id" placeholder="Item ID" required>
+    <input type="text" name="name" placeholder="Item Name" required>
+    <input type="text" name="price" placeholder="Item Price" required>
+    <input type="text" name="quantity" placeholder="Item Quantity" required>
+    <button name="submit" value="Update" type="submit">Update</button>
+  </form>
+
+  {% for data in datas %}
+  <p>{{data[0]}} - {{data[1]}} - {{data[2]}} - {{data[3]}}</p>
+  {% endfor %}
+</body>
+
+</html>
